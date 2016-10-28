@@ -54,7 +54,7 @@ function incert(response, postData) {
 }
 
 function add(response, postData) {
-    console.log("Request handler 'incert' was called.");
+    console.log("Request handler 'add' was called.");
 
     var body = '<html>'+
         '<head>'+
@@ -76,7 +76,7 @@ function add(response, postData) {
 }
 
 function del(response, postData) {
-    console.log("Request handler 'incert' was called.");
+    console.log("Request handler 'del' was called.");
 
     var body = '<html>'+
         '<head>'+
@@ -117,7 +117,7 @@ function list(response, postData) {
 }
 
 function responceAdd(response, postData) {
-    console.log("Request handler 'upload' was called.");
+    console.log("Request handler '/responce/add' was called.");
     var newId = ++ db[db.length-1].id;
     var answer = '';
     var id = querystring.parse(postData).id;
@@ -146,7 +146,7 @@ function responceAdd(response, postData) {
 }
 
 function responceDel(response, postData) {
-    console.log("Request handler 'upload' was called.");
+    console.log("Request handler '/responce/del' was called.");
     var newId = ++ db[db.length-1].id;
     var answer = '';
     var id = querystring.parse(postData).id;
@@ -180,7 +180,7 @@ function responceDel(response, postData) {
 }
 
 function responceIncert(response, postData) {
-    console.log("Request handler 'upload' was called.");
+    console.log("Request handler 'responce/incert' was called.");
     var newId = ++ db[db.length-1].id;
     var answer = '';
     if (querystring.parse(postData).name == '') {
